@@ -4,17 +4,31 @@
              x:Class="CurrencyConvertor.MainPage">
 
     <StackLayout x:Name="main_layout" Orientation="Vertical">
-        <StackLayout>
+        <StackLayout Orientation="Horizontal" Background="#797979">
             <Label Text="Курс валют" Background="#797979" HeightRequest="50" VerticalTextAlignment="Center" FontFamily="montserrat" TextColor="White"  HorizontalTextAlignment="Center" FontSize="Body"  ></Label>
+            <Button  x:Name="btn2" ContentLayout="Top,0" BackgroundColor="White" ImageSource="settings.png"  WidthRequest="80" HeightRequest="50"  HorizontalOptions="CenterAndExpand"  TextColor="Gray" Clicked="btn2_Clicked" />
+
+
 
         </StackLayout>
-        <StackLayout Background="White" HeightRequest="720" Margin="0 -10 0 0"  x:Name="currency_layout" >
-            <StackLayout Orientation="Vertical" Margin="5">
-                <StackLayout Orientation="Horizontal" Margin="10 0 0 0">
-                    <Label Text="USD" TextColor="Black" FontAttributes="None" FontSize="15"></Label>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+            <DatePicker x:Name="firstDataPicker" DateSelected="firstDataPicker_DateSelected"></DatePicker>
+            <DatePicker  x:Name="secondDataPicker" DateSelected="secondDataPicker_DateSelected"></DatePicker>
+        </StackLayout>
+        <StackLayout Background="White" HeightRequest="720" Margin="-6,0,0,0"  x:Name="currency_layout" >
+            <ScrollView x:Name="mainscroll">
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout x:Name="currencyname" WidthRequest="180"  Margin="10,0,0,0" Orientation="Vertical"></StackLayout>
+                    <StackLayout x:Name="small" Orientation="Horizontal" HorizontalOptions="End">
+                        <StackLayout x:Name="firstcurrency" ></StackLayout>
+                        <StackLayout x:Name="secondcurrency"></StackLayout>
+                    </StackLayout>
+                    
                 </StackLayout>
-                <StackLayout></StackLayout>
-            </StackLayout>
+             
+
+            </ScrollView>
         </StackLayout>
     </StackLayout>
     
