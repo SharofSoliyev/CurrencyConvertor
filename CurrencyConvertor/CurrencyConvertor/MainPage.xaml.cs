@@ -182,9 +182,9 @@ namespace CurrencyConvertor
 
         }
 
-        private void btn2_Clicked(object sender, EventArgs e)
+         async void btn2_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Settings());
         }
     }
 
